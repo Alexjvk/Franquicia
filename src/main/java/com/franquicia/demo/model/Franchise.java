@@ -1,7 +1,6 @@
 package com.franquicia.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,5 +21,4 @@ public class Franchise {
     @OneToMany(mappedBy = "franchise", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Branch> branches = new ArrayList<>();
-
 }

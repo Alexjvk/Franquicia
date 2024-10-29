@@ -6,7 +6,6 @@ import com.franquicia.demo.repository.BranchRepository;
 import com.franquicia.demo.repository.FranchiseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 @Service
@@ -40,4 +39,3 @@ public class BranchService {
         return branchRepository.save(branch);
     }
 }
-

@@ -16,7 +16,7 @@ public class ProductController {
     private ProductService productService;
 
     @Autowired
-    private BranchService branchService;  // Inyección de BranchService
+    private BranchService branchService;
 
 
     //Endpoint para agregar un producto
@@ -24,7 +24,7 @@ public class ProductController {
     public ResponseEntity<Product> addProduct(@PathVariable Long branchId, @RequestBody Product product) {
         Branch branch = branchService.findById(branchId)
                 .orElseThrow(() -> new RuntimeException("Branch not found with id: " + branchId));
-        product.setBranch(branch);  // Asigna el objeto Branch directamente
+        product.setBranch(branch);
         Product savedProduct = productService.addProduct(product);
 
         return ResponseEntity.ok(savedProduct);

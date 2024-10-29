@@ -1,4 +1,5 @@
 package com.franquicia.demo.service;
+
 import com.franquicia.demo.model.Branch;
 import com.franquicia.demo.model.Product;
 import com.franquicia.demo.repository.BranchRepository;
@@ -56,9 +57,8 @@ public class ProductService {
     // Método para actualizar el nombre de un producto
     public Product updateProductName(Long id, String newName) {
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+                .orElseThrow(() -> new RuntimeException("Producto no encontrado"));
         product.setName(newName);
         return productRepository.save(product);
     }
-
 }

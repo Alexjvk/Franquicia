@@ -1,11 +1,11 @@
 package com.franquicia.demo.controller;
+
 import com.franquicia.demo.model.Franchise;
 import com.franquicia.demo.model.Product;
 import com.franquicia.demo.service.FranchiseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,13 +52,11 @@ public class FranchiseController {
         Map<String, Object> franchiseMap = new HashMap<>();
         franchiseMap.put("id", franchise.getId());
         franchiseMap.put("name", franchise.getName());
-
         response.put("franchise", franchiseMap);
         response.put("branches", branchesMap);
 
         return ResponseEntity.ok(response);
     }
-
 
     // Endpoint para obtener todas las franquicias
     @GetMapping("/get")
