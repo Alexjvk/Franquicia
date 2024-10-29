@@ -38,9 +38,7 @@ URL: http://localhost:8080/api/franchises/{id-franquicia}/update-name
 
 Body (JSON):
 
-{
-  "name": "Nuevo Nombre"
-}
+"Nuevo nombre"
 
 ____________________________________________________________________________________________
 
